@@ -1,0 +1,49 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+
+# -----------
+[plugins.zsh-completions]
+github = 'zsh-users/zsh-completions'
+
+# ---------------
+# === Ohmyzsh ===
+# ---------------
+
+# Loading lib
+[plugins.ohmyzsh-lib]
+github = "ohmyzsh/ohmyzsh"
+dir = "lib"
+#
+# Loading OMZ Plugins
+[plugins.ohmyzsh-plugins]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins"
+use = ["{git,npm,thefuck,nvm}.plugin.zsh"]
+#
+# === Other Plugins
+#
+[plugins.FSyH]
+github = 'zdharma/fast-syntax-highlighting'
+#
+[plugins.zsh-you-should-use]
+github = 'MichaelAquilina/zsh-you-should-use'
+
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+use = ["{{ name }}.zsh"]
+
+[plugins.auto-ls]
+github = 'desyncr/auto-ls'
