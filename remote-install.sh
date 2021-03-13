@@ -2,6 +2,14 @@
 
 DOTFILES="$HOME/.dotfiles"
 GITHUB_REPO_URL="https://github.com/ExtinctAxolotl/dotfiles"
+info() {
+  echo -e "${YELLOW}${*}${RESET}"
+}
+
+success() {
+	echo -e "${GREEN}${*}${RESET}"
+}
+
 install_app() {
   info "Trying to find ${1}"
 	if ! is_installed_pkg $1; then
