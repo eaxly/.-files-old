@@ -3,7 +3,7 @@
 DOTFILES="$HOME/.dotfiles"
 GITHUB_REPO_URL="https://github.com/ExtinctAxolotl/dotfiles"
 info() {
-  echo -e "${YELLOW}${*}${RESET}"
+	echo -e "${YELLOW}${*}${RESET}"
 }
 
 success() {
@@ -11,7 +11,7 @@ success() {
 }
 
 install_app() {
-  info "Trying to find ${1}"
+	info "Trying to find ${1}"
 	if ! is_installed_pkg $1; then
 		read -p "Do you wan't to install $1? [y/N] " -n 1 answer
 		if [ ${answer} == "y" ]; then
