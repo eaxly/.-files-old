@@ -2,7 +2,9 @@
 
 DOTFILES="$HOME/.dotfiles"
 GITHUB_REPO_URL="https://github.com/ExtinctAxolotl/dotfiles"
-
+is_installed() {
+command -v $1 > /dev/null 2>&1
+}
 install_dotfiles() {
   info "Trying to detect if dotfiles are installed..."
 
