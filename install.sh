@@ -196,8 +196,6 @@ install_gui_apps() {
 	install_app firefox
 	# install font manager
 	install_app font-manager
-	# install vscode
-	install_code
 }
 
 install_cli_tools() {
