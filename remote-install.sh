@@ -6,7 +6,7 @@ GITHUB_REPO_URL="https://github.com/ExtinctAxolotl/dotfiles"
 install_dotfiles() {
   info "Trying to detect if dotfiles are installed..."
 
-  if [ ! -d $DOTFILES]; then
+  if [ ! -d $DOTFILES ]; then
     info "Dotfiles don't exist..."
     if is_installed git; then
 			read -p "Do you wan't to install dotfiles? [y/N]" -n 1 answer
